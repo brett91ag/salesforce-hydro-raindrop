@@ -1,0 +1,28 @@
+<apex:page controller="HydroUserController">
+
+ <apex:pageBlock title="Hydro User Management">
+    <apex:pageBlockTable value="{!Users}" var="listofusers">
+        <apex:column headerValue="Name">
+            {!listofusers.Name}  
+        </apex:column>
+  
+        <apex:column headerValue="Email Address">
+           {!listofusers.Email}
+        </apex:column>  
+
+        <!--<apex:column headerValue="HydroID">
+           {!listofusers.HydroID__c}
+        </apex:column>-->
+
+        <apex:column headerValue="">
+          <apex:outputLink value="{!$Page.HydroUserRunFlow}?id={!listofusers.id}" rendered="{!listofusers.HydroID__c != '' && NOT(ISNULL(listofusers.HydroID__c))}">
+              unlink
+          </apex:outputLink>
+          <apex:outputPanel rendered="{!listofusers.HydroID__c == '' || ISNULL(listofusers.HydroID__c)}">
+              not registered
+          </apex:outputPanel>
+        </apex:column> 
+                     
+    </apex:pageBlockTable>
+</apex:pageBlock>
+</apex:page>

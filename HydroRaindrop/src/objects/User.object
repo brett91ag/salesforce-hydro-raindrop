@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>HydroID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Hydro ID - users unique Identifier used for Raindrop authentication</description>
+        <externalId>false</externalId>
+        <label>HydroID</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+</CustomObject>
